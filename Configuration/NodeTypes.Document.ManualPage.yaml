@@ -1,0 +1,20 @@
+'NeosRulez.ManualPage:ManualPage':
+  ui:
+    label: 'Manual page'
+    icon: 'icon-info-circle'
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+  superTypes:
+    'Neos.Neos:Document': true
+  properties:
+    _hiddenInIndex:
+      defaultValue: true
+      ui:
+        inspector:
+          group: null
+    _hiddenInIndex:
+      defaultValue: true
+      ui:
+        inspector:
+          group: null

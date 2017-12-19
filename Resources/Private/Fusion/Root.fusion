@@ -1,0 +1,32 @@
+root {
+    manualPage {
+        condition = ${q(node).is('[instanceof NeosRulez.ManualPage:ManualPage]')}
+        type = ${q(node).property('_nodeType') + '.Document'}
+        renderPath >
+    }
+}
+
+prototype(NeosRulez.ManualPage:ManualPage.Document) < prototype(Page) {
+    head {
+        css = Neos.Fusion:Tag {
+            tagName = 'link'
+            attributes {
+                href = Neos.Fusion:ResourceUri {
+                    package = 'NeosRulez.Site'
+                    path = 'resource://NeosRulez.ManualPage/Public/Styles/app.css'
+                }
+                type = 'text/css'
+                rel = 'stylesheet'
+            }
+        }
+    }
+    body = NeosRulez.ManualPage:ManualPage
+    @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
+}
+
+prototype(NeosRulez.ManualPage:ManualPage) {
+    templatePath = 'resource://NeosRulez.ManualPage/Private/Templates/ManualPage/ManualPage.html'
+    main = Neos.Neos:ContentCollection {
+        nodePath = 'main'
+    }
+}
