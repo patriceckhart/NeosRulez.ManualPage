@@ -2,6 +2,7 @@
   ui:
     label: 'Manual page'
     icon: 'icon-info-circle'
+    group: manualpage
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'
