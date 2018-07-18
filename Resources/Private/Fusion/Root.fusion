@@ -21,7 +21,7 @@ prototype(NeosRulez.ManualPage:ManualPage.Document) < prototype(Neos.Neos:Page) 
         }
     }
     body = NeosRulez.ManualPage:ManualPage
-    @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
+    @process.1 = ${node.context.workspaceName != 'live' ? value : '<meta http-equiv="refresh" content="0; URL=/">'}
 }
 
 prototype(NeosRulez.ManualPage:ManualPage) < prototype(Neos.Fusion:Template) {
