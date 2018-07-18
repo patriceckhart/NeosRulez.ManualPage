@@ -6,7 +6,7 @@ root {
     }
 }
 
-prototype(NeosRulez.ManualPage:ManualPage.Document) < prototype(Page) {
+prototype(NeosRulez.ManualPage:ManualPage.Document) < prototype(Neos.Neos:Page) {
     head {
         css = Neos.Fusion:Tag {
             tagName = 'link'
@@ -24,7 +24,7 @@ prototype(NeosRulez.ManualPage:ManualPage.Document) < prototype(Page) {
     @process.1 = ${node.context.workspaceName != 'live' ? value : ''}
 }
 
-prototype(NeosRulez.ManualPage:ManualPage) {
+prototype(NeosRulez.ManualPage:ManualPage) < prototype(Neos.Fusion:Template) {
     templatePath = 'resource://NeosRulez.ManualPage/Private/Templates/ManualPage/ManualPage.html'
     main = Neos.Neos:ContentCollection {
         nodePath = 'main'

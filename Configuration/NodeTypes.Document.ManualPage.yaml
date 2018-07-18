@@ -10,12 +10,7 @@
     'Neos.Neos:Document': true
   properties:
     _hiddenInIndex:
-      defaultValue: true
-      ui:
-        inspector:
-          group: null
-    _hiddenInIndex:
-      defaultValue: true
+      defaultValue: TRUE
       ui:
         inspector:
           group: null
